@@ -1,14 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import { Header } from './src/components';
+import { View } from 'react-native';
+import { Provider } from 'react-redux';
+
+import Store from './src/Store';
+import { Header, CryptoContainer } from './src/components';
 
 export default class App extends Component {
   render() {
     return (
-      <View>
-        <Header />
-      </View>
+      <Provider store={Store}>
+        <View>
+          <Header />
+          <CryptoContainer />
+        </View>
+      </Provider>
     );
   }
 }
