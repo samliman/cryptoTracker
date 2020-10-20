@@ -15,7 +15,7 @@ class CryptoContainer extends Component {
 function mapStateToProps(state) {
     return {
         crypto: state.crypto
-    }
+    }   
 }
 
 export default connect(mapStateToProps)(CryptoContainer)
